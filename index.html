@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Survey</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="your-script.js" defer></script>
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    
+    <div id="popupContainer"></div>
+    <!-- Information Table -->
+    <div class="form-section" id="form1">
+        <h2>Information Table</h2>
+        <form id="infoForm">
+            <label for="pseudonym">Pseudonym</label>
+            <input type="text" id="pseudonym" name="pseudonym" required>
+
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="watchFrequency">Watch Frequency</label>
+            <select id="watchFrequency" name="watchFrequency" required>
+                <option value="Daily">Daily</option>
+                <option value="Weekly">Weekly</option>
+                <option value="Monthly">Monthly</option>
+                <option value="Rarely">Rarely</option>
+            </select>
+
+            <label for="yearLevel">Year Level (in college)</label>
+            <select id="yearLevel" name="yearLevel" required>
+                <option value="1st Year">1st Year</option>
+                <option value="2nd Year">2nd Year</option>
+                <option value="3rd Year">3rd Year</option>
+                <option value="4th Year">4th Year</option>
+            </select>
+
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </form>
+    </div>
+
+    <!-- MY UGT Questions -->
+    <div class="form-section" id="form2">
+        <h2>UGT Questions</h2>
+        <form id="ugtForm">
+            <!-- Likert Scale Questions -->
+            <div id="likertQuestions">
+                <label for="question1">I watch anime to escape from stress and the struggles of daily life.</label>
+                <select id="question1" name="question1" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+                <label for="question2">I watch anime purely for entertainment purposes.
+
+                </label>
+                <select id="question2" name="question2" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="question3">I watch anime to experience emotions I don’t usually feel in real life.
+
+                </label>
+                <select id="question3" name="question3" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="question4">Anime helps me relax and unwind after a long day.
+
+                </label>
+                <select id="question4" name="question4" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="question5">I find comfort in the stories and characters portrayed in anime.
+
+                </label>
+                <select id="question5" name="question5" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="question6">I use anime as a way to avoid boredom.
+
+                </label>
+                <select id="question6" name="question6" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="question7">Watching anime keeps me from feeling lonely.</label>
+                <select id="question7" name="question7" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="question8">I enjoy watching anime with friends or family.
+
+                </label>
+                <select id="question8" name="question8" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="question9">I like discussing anime with others through online or otherwise.</label>
+                <select id="question9" name="question9" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="question10">I feel more connected to online communities because of anime.</label>
+                <select id="question10" name="question10" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="question11">I watch anime to learn about Japanese culture or language.
+
+                </label>
+                <select id="question11" name="question11" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="question12">Anime makes me be more creative or imaginative.</label>
+                <select id="question12" name="question12" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="question13">Anime influences the way I think about real-life issues.
+
+                </label>
+                <select id="question13" name="question13" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="question14">I watch anime because it features characters I admire or like.</label>
+                <select id="question14" name="question14" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="question15">I often relate to the struggles of anime characters.</label>
+                <select id="question15" name="question15" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="question16">I feel motivated by the stories I see in anime.</label>
+                <select id="question16" name="question16" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="question17">I watch anime because of its unique artstyle.</label>
+                <select id="question17" name="question17" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="question18">Anime helps me cope with negative emotions.</label>
+                <select id="question18" name="question18" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="question19">I feel more emotionally engaged when watching anime compared to other media like kdrama.</label>
+                <select id="question19" name="question19" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="question20">I follow anime trends to stay updated with what others are watching.</label>
+                <select id="question20" name="question20" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="question21">I watch anime during specific moods (e.g., when I'm sad, happy, bored).</label>
+                <select id="question21" name="question21" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="question22">I feel a sense of belonging with other anime fans.</label>
+                <select id="question22" name="question22" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="question23">Anime plays an important role in my daily routine.</label>
+                <select id="question23" name="question23" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="question24">Lessons can be learned from watching anime and I follow it</label>
+                <select id="question24" name="question24" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <label for="question25"> I feel a deep emotional attachment to certain anime characters or series (makes you cry or angry when something happens bad). </label>
+                <select id="question25" name="question25" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                
+            </div>
+        </form>
+    </div>
+
+    
+    <div class="form-section" id="genreSelection">
+        <h2>Select Your Top 3 Favorite Genres</h2>
+        <p>You can choose up to 3 genres.</p>
+        <div id="genreCheckboxes">
+            <label><input type="checkbox" name="genre" value="Action"> Action</label><br>
+            <label><input type="checkbox" name="genre" value="Adventure"> Adventure</label><br>
+            <label><input type="checkbox" name="genre" value="Comedy"> Comedy</label><br>
+            <label><input type="checkbox" name="genre" value="Drama"> Drama</label><br>
+            <label><input type="checkbox" name="genre" value="Fantasy"> Fantasy</label><br>
+            <label><input type="checkbox" name="genre" value="Horror"> Horror</label><br>
+            <label><input type="checkbox" name="genre" value="Romance"> Romance</label><br>
+            <label><input type="checkbox" name="genre" value="Sci-Fi"> Sci-Fi</label>
+        </div>
+    </div>
+    
+    <div id="selectedGenreNames" style="margin-top: 20px; font-weight: bold;"></div>
+
+    <button type="button" onclick="goToNextPage()">Next</button>
+
+<!-- Survey Questions -->
+        <section id="survey-questions" style="display: none;">
+            <h2>Answer the Questions</h2>
+            <form id="Action-Genre">
+                <div id="questions-container">
+                    <h2>Extraversion (E) vs Introversion (I)</h2>
+                    <label>1. When the enemy's ace locks eyes with you and demands a duel, do you shout "BRING IT ON!/LET'S GO!" and leap into battle without hesitation (E), or do you take a silent step back, studying his stance for an opening before you strike (I)?</label><br>
+                    <label><input type="radio" name="question1" value="E" required> E</label>
+                    <label><input type="radio" name="question1" value="I" required> I</label><br><br>
+
+                    <label>2. The enemy corners your team—do you rally them with a cry "FOLLOW MY LEAD!" as you spearhead the charge (E), or do you vanish into the mist, picking off enemies one by one from the darkness (I)?</label><br>
+                    <label><input type="radio" name="question2" value="E" required> E</label>
+                    <label><input type="radio" name="question2" value="I" required> I</label><br><br>
+
+                    <label>3. 3. After a fight, your team is laughing and celebrating—do you jump into the hype, feeding off their energy as you recount every epic moment (E), or do you slip away to a quiet spot, letting the adrenaline fade as you gather your thoughts alone (I)?</label><br>
+                    <label><input type="radio" name="question3" value="E" required> E</label>
+                    <label><input type="radio" name="question3" value="I" required> I</label><br><br>
+
+                    <label>4. The air is thick with sweat and loud shots from both sides—do you feel your spirit burn brighter in the chaos, fighting harder with every cheer from your team (E), or do you retreat just long enough to tune out the noise and focus on your next move (I)?
+                    </label><br>
+                    <label><input type="radio" name="question4" value="E" required> E</label>
+                    <label><input type="radio" name="question4" value="I" required> I</label><br><br>
+
+                    <label>5. Would you rather inspire others through your actions in the moment (E) or reflect on your strategy in solitude (I)?</label><br>
+                    <label><input type="radio" name="question5" value="E" required> E</label>
+                    <label><input type="radio" name="question5" value="I" required> I</label><br><br>
+
+                    <h2>Sensing (S) vs Intuition (N)</h2>
+                    <label>6. In the chaos of battle, do you lock in on every sound, movement, and detail around you (S), or let your instincts pull you toward something you feel coming before it even happens (N)?</label><br>
+                    <label><input type="radio" name="question6" value="S" required> S</label>
+                    <label><input type="radio" name="question6" value="N" required> N</label><br><br>
+
+                    <label>7. As you prep your next move, are you scanning every wall, shadow, and object for tactical use (S), or running mental simulations of what could go down five steps ahead (N)?</label><br>
+                    <label><input type="radio" name="question7" value="S" required> S</label>
+                    <label><input type="radio" name="question7" value="N" required> N</label><br><br>
+
+                    <label>8. When things get wild, do you stick to the techniques burned into your muscle memory (S), or throw caution out the window and try something wild you've never done before(N)?</label><br>
+                    <label><input type="radio" name="question8" value="S" required> S</label>
+                    <label><input type="radio" name="question8" value="N" required> N</label><br><br>
+
+                    <label>9. In the heat of battle, do you keep your feet planted in the now, reacting to what's real and in front of you (S), or let your mind drift into unconventional plays that might just flip everything (N)?</label><br>
+                    <label><input type="radio" name="question9" value="S" required> S</label>
+                    <label><input type="radio" name="question9" value="N" required> N</label><br><br>
+
+                    <label>10. Do you follow the battle-tested plan that's always worked before (S), or chase the risky new idea that just feels like it could be genius (N)?</label><br>
+                    <label><input type="radio" name="question10" value="S" required> S</label>
+                    <label><input type="radio" name="question10" value="N" required> N</label><br><br>
+
+                    <h2>Thinking (T) vs Feeling (F)</h2>
+                    <label>11. When your enemy's wide open, do you strike without hesitation because it's the smartest move (T), or hold back for a second, wondering what that hit might mean to the people watching (F)?</label><br>
+                    <label><input type="radio" name="question11" value="T" required> T</label>
+                    <label><input type="radio" name="question11" value="F" required> F</label><br><br>
+
+                    <label>12. If your teammate screws up mid-fight, are you already pointing out the flaw they made so it doesn't happen again (T), or giving them a quick "You got this" to stop them from falling apart (F)??</label><br>
+                    <label><input type="radio" name="question12" value="T" required> T</label>
+                    <label><input type="radio" name="question12" value="F" required> F</label><br><br>
+
+                    <label>13. In a fight will you go for the cleanest, fastest takedown to end things efficiently (T), or dodging extra risks just to make sure no one gets hurt (F)?><br>
+                    <label><input type="radio" name="question13" value="T" required> T</label>
+                    <label><input type="radio" name="question13" value="F" required> F</label><br><br>
+
+                    <label>14. In a life-or-death choice, do you break your it down like a chessboard and pick best outcome (T), or trust your gut and do what feels right, even if the math doesn't add up (F)?</label><br>
+                    <label><input type="radio" name="question14" value="T" required> T</label>
+                    <label><input type="radio" name="question14" value="F" required> F</label><br><br>
+
+                    <label>15. When two close friends go head-to-head, do you back the one with the most solid reasoning (T), or stand by the one whose emotions hit you right in the heart (F)?</label><br>
+                    <label><input type="radio" name="question15" value="T" required> T</label>
+                    <label><input type="radio" name="question15" value="F" required> F</label><br><br>
+
+                    
+                    <h2>Judging (J) vs Perceiving (P)</h2>
+                    <label>16. Before stepping into the danger zone, do you need every move prepped like a mission file (J), or do you roll in ready to shift gears the second things go off script (P)?</label><br>
+                    <label><input type="radio" name="question16" value="J" required> J</label>
+                    <label><input type="radio" name="question16" value="P" required> P</label><br><br>
+
+                    <label>17. When it hits up, are you locked into your strategy (J), or throwing out the plan and winging it based on instinct and chaos (P)?</label><br>
+                    <label><input type="radio" name="question17" value="J" required> J</label>
+                    <label><input type="radio" name="question17" value="P" required> P</label><br><br>
+
+                    <label>18. Do you feel most alive knowing your exact role in the team and nailing it (J), or bouncing between roles, switching it up as the fight evolves (P)?</label><br>
+                    <label><input type="radio" name="question18" value="J" required> J</label>
+                    <label><input type="radio" name="question18" value="P" required> P</label><br><br>
+
+                    <label>19. Is your strength in preparing for every problem like a tactician, or in trusting that your gut and quick thinking will carry you through the unknown?</label><br>
+                    <label><input type="radio" name="question19" value="J" required> J</label>
+                    <label><input type="radio" name="question19" value="P" required> P</label><br><br>
+
+                    <label>20. When things start falling apart, do you tighten up, stick to the plan, and push through (J), or rip up the script and try something bold that no one saw coming(P?)</label><br>
+                    <label><input type="radio" name="question20" value="J" required> J</label>
+                    <label><input type="radio" name="question20" value="P" required> P</label><br><br>
+                </div>
+            </form>  
+            <form id="Adventure-Genre">
+                <div id="questions-container">
+                    <h2>Extraversion (E) vs Introversion (I)</h2>
+                    <label>1. When the call to traveling, do you grab your bag, shout “Let’s go!” and set off without looking back (E), or pause to map your route, journal your thoughts, and move at your own pace (I)?</label><br>
+                    <label><input type="radio" name="question1" value="E" required> E</label>
+                    <label><input type="radio" name="question1" value="I" required> I</label><br><br>
+
+                    <label>2. If lost in an unfamiliar land, do you prefer asking locals for help and making connections (E) or relying on your own observations and inner compass (I)?</label><br>
+                    <label><input type="radio" name="question2" value="E" required> E</label>
+                    <label><input type="radio" name="question2" value="I" required> I</label><br><br>
+
+                    <label>3. Do you naturally take charge, rallying the team with your energy and ideas (E), or find comfort in supporting the travel from behind the scenes, only watching but always ready (I)?</label><br>
+                    <label><input type="radio" name="question3" value="E" required> E</label>
+                    <label><input type="radio" name="question3" value="I" required> I</label><br><br>
+
+                    <label>4. When you stumble upon something incredible in your travels — a hidden spot, a rare rock, a cute animal — do you call everyone over to see as well, or take a moment to soak it in by yourself?</label><br>
+                    <label><input type="radio" name="question4" value="E" required> E</label>
+                    <label><input type="radio" name="question4" value="I" required> I</label><br><br>
+
+                    <label>5. During the travel, your team discovered a cave, do you go with them exploring knowing that it could be dangerous (E), or warn them to step back and reject the idea (I)?</label><br>
+                    <label><input type="radio" name="question5" value="E" required> E</label>
+                    <label><input type="radio" name="question5" value="I" required> I</label><br><br>
+
+                    
+                    <h2>Sensing (S) vs Intuition (N)</h2>
+                    <label>6. As you visit new places, are you soaking in the air and sound around you (S), or already thinking about the unknown that could be waiting just beyond the next spot you will visit (N)?</label><br>
+                    <label><input type="radio" name="question6" value="S" required> S</label>
+                    <label><input type="radio" name="question6" value="N" required> N</label><br><br>
+
+                    <label>7. When you're lost, do you pull out the GPS or map and trace the quickest and safest route (S), or just go and follow a hunch that it will ultimately lead to your destination (N)?</label><br>
+                    <label><input type="radio" name="question7" value="S" required> S</label>
+                    <label><input type="radio" name="question7" value="N" required> N</label><br><br>
+
+                    <label>8. When you're traveling is it better to use the usual tools you have for travel (S), or throw caution to the wind and try stuff for the first time and see where and how far will it take you(N)?</label><br>
+                    <label><input type="radio" name="question8" value="S" required> S</label>
+                    <label><input type="radio" name="question8" value="N" required> N</label><br><br>
+
+                    <label>9. When your car got into a trouble at night during your travel, are you the one to suggest to fix things, and make sure you solve it in time to continue the travel (S), or would you suggest to find a place to rest and continue when it's morning (N)?</label><br>
+                    <label><input type="radio" name="question9" value="S" required> S</label>
+                    <label><input type="radio" name="question9" value="N" required> N</label><br><br>
+
+                    <label>10. Are you more drawn to places that feel familiar and reliable (S), or do you chase the thrill of the unknown, guided only by the feeling deep in your gut (N)?</label><br>
+                    <label><input type="radio" name="question10" value="S" required> S</label>
+                    <label><input type="radio" name="question10" value="N" required> N</label><br><br>
+
+                
+                    <h2>Thinking (T) vs Feeling (F)</h2>
+                    <label>11. When choosing your next path, are you mapping out the pros and cons with with seriousness (T), or tuning in to what feels right deep in your soul (F)?</label><br>
+                    <label><input type="radio" name="question11" value="T" required> T</label>
+                    <label><input type="radio" name="question11" value="F" required> F</label><br><br>
+
+                    <label>12. If a friend pushes back on your plan, do you try break down the logic behind your decision (T), or pause to understand their emotions and shift course if it could mean smoother travels(F)?</label><br>
+                    <label><input type="radio" name="question12" value="T" required> T</label>
+                    <label><input type="radio" name="question12" value="F" required> F</label><br><br>
+
+                    <label>13. Do you focus on reaching the goal as efficiently as possible (T), or make sure that "the going" strengthens your bonds as a group more than the goal (F)?</label><br>
+                    <label><input type="radio" name="question13" value="T" required> T</label>
+                    <label><input type="radio" name="question13" value="F" required> F</label><br><br>
+
+                    <label>14. In high-stakes moments, do you rely on rational thinking to guide your choices (T), or follow your heart, even if it defies reason (F)?</label><br>
+                    <label><input type="radio" name="question14" value="T" required> T</label>
+                    <label><input type="radio" name="question14" value="F" required> F</label><br><br>
+
+                    <label>15. When the group couldn't decide over the path ahead, do you support the one with the clearer reasoning (T), or stand with the "go with the flow" side of your travel buddies (F)?</label><br>
+                    <label><input type="radio" name="question15" value="T" required> T</label>
+                    <label><input type="radio" name="question15" value="F" required> F</label><br><br>
+
+                    
+                    <h2>Judging (J) vs Perceiving (P)</h2>
+                    <label>16. Before setting out on an adventure, do you lay down a full itinerary with backup plans (J), or just pack your stuff and trust the road to shape your adventure (P)?</label><br>
+                    <label><input type="radio" name="question16" value="J" required> J</label>
+                    <label><input type="radio" name="question16" value="P" required> P</label><br><br>
+
+                    <label>17. When something unexpected shows up in your travel (T), do you stick to the plan or throw it out and see where the situation leads you (P)?</label><br>
+                    <label><input type="radio" name="question17" value="J" required> J</label>
+                    <label><input type="radio" name="question17" value="P" required> P</label><br><br>
+
+                    <label>18. Do you feel more comfortable knowing exactly where you're going and what to expect (J) or enjoying the thrill of uncertainty and surprise (P)?</label><br>
+                    <label><input type="radio" name="question18" value="J" required> J</label>
+                    <label><input type="radio" name="question18" value="P" required> P</label><br><br>
+
+                    <label>19. Are you the type to double-check, triple-check, quadruple-check supplies and rehearsing the travel plan (T), or going with the flow, confident you'll deal with problems as they come(P)?</label><br>
+                    <label><input type="radio" name="question19" value="J" required> J</label>
+                    <label><input type="radio" name="question19" value="P" required> P</label><br><br>
+
+                    <label>20. When the path towards you destination is blocked, do you pause and assess the situation (J), or work through it on the go (P)?</label><br>
+                    <label><input type="radio" name="question20" value="J" required> J</label>
+                    <label><input type="radio" name="question20" value="P" required> P</label><br><br>
+
+                </div>
+            </form>
+            <form id="Comedy-Genre">
+                <div id="questions-container">
+                    <h2>Extraversion (E) vs Introversion (I)</h2>
+                    <label>1. When something funny happens, do you immediately share it with everyone around you (E) or quietly enjoy the moment on your own (I)?</label><br>
+                    <label><input type="radio" name="question1" value="E" required> E</label>
+                    <label><input type="radio" name="question1" value="I" required> I</label><br><br>
+
+                    <label>2. Would you rather be the one cracking jokes and making others laugh (E) or sit back and appreciate the humor in the situation (I)?</label><br>
+                    <label><input type="radio" name="question2" value="E" required> E</label>
+                    <label><input type="radio" name="question2" value="I" required> I</label><br><br>
+
+                    <label>3. If a comedic situation arises, do you jump into the spotlight to entertain (E) or observe from the sidelines and let others take the lead (I)?</label><br>
+                    <label><input type="radio" name="question3" value="E" required> E</label>
+                    <label><input type="radio" name="question3" value="I" required> I</label><br><br>
+
+                    <label>4. Do you find yourself more energized by laughing with a group of friends (E) or prefer to savor humor privately through books or shows (I)?</label><br>
+                    <label><input type="radio" name="question4" value="E" required> E</label>
+                    <label><input type="radio" name="question4" value="I" required> I</label><br><br>
+
+                    <label>5. In a lighthearted conversation, do you contribute with witty remarks and keep the energy high (E) or listen carefully and respond thoughtfully (I)?</label><br>
+                    <label><input type="radio" name="question5" value="E" required> E</label>
+                    <label><input type="radio" name="question5" value="I" required> I</label><br><br>
+
+                    <!-- Sensing (S) vs Intuition (N) -->
+                    <h2>Sensing (S) vs Intuition (N)</h2>
+                    <label>6. When watching a comedy, do you focus more on the physical humor and visual gags (S) or enjoy the clever wordplay and abstract jokes (N)?</label><br>
+                    <label><input type="radio" name="question6" value="S" required> S</label>
+                    <label><input type="radio" name="question6" value="N" required> N</label><br><br>
+
+                    <label>7. Would you rather laugh at something that's happening right in front of you (S) or appreciate the absurdity of an imagined or hypothetical scenario (N)?</label><br>
+                    <label><input type="radio" name="question7" value="S" required> S</label>
+                    <label><input type="radio" name="question7" value="N" required> N</label><br><br>
+
+                    <label>8. Do you prefer jokes that are grounded in reality and relatable experiences (S) or ones that explore wild and imaginative scenarios (N)?</label><br>
+                    <label><input type="radio" name="question8" value="S" required> S</label>
+                    <label><input type="radio" name="question8" value="N" required> N</label><br><br>
+
+                    <label>9. Is it more satisfying to laugh at something that aligns with your current surroundings (S) or something that sparks your imagination and creativity (N)?</label><br>
+                    <label><input type="radio" name="question9" value="S" required> S</label>
+                    <label><input type="radio" name="question9" value="N" required> N</label><br><br>
+
+                    <label>10. Would you rather enjoy humor that plays on familiar patterns and routines (S) or humor that surprises you with unexpected twists (N)?</label><br>
+                    <label><input type="radio" name="question10" value="S" required> S</label>
+                    <label><input type="radio" name="question10" value="N" required> N</label><br><br>
+
+                    <!-- Thinking (T) vs Feeling (F) -->
+                    <h2>Thinking (T) vs Feeling (F)</h2>
+                    <label>11. When deciding whether to make a joke, do you consider its logical impact on the conversation (T) or how it might affect people's emotions (F)?</label><br>
+                    <label><input type="radio" name="question11" value="T" required> T</label>
+                    <label><input type="radio" name="question11" value="F" required> F</label><br><br>
+
+                    <label>12. If someone doesn't get your joke, do you explain it logically (T) or try to rephrase it in a way that resonates emotionally (F)?</label><br>
+                    <label><input type="radio" name="question12" value="T" required> T</label>
+                    <label><input type="radio" name="question12" value="F" required> F</label><br><br>
+
+                    <label>13. Would you prioritize telling a joke that is intellectually stimulating (T) or one that brings joy and warmth to the group (F)?</label><br>
+                    <label><input type="radio" name="question13" value="T" required> T</label>
+                    <label><input type="radio" name="question13" value="F" required> F</label><br><br>
+
+                    <label>14. In a humorous situation, do you analyze why something is funny objectively (T) or simply enjoy the emotional response it evokes (F)?</label><br>
+                    <label><input type="radio" name="question14" value="T" required> T</label>
+                    <label><input type="radio" name="question14" value="F" required> F</label><br><br>
+
+                    <label>15. When two friends have different senses of humor, do you side with the one whose reasoning makes sense to you (T) or support the one who seems happier with their choice (F)?</label><br>
+                    <label><input type="radio" name="question15" value="T" required> T</label>
+                    <label><input type="radio" name="question15" value="F" required> F</label><br><br>
+
+                    <!-- Judging (J) vs Perceiving (P) -->
+                    <h2>Judging (J) vs Perceiving (P)</h2>
+                    <label>16. Before attending a comedy show, do you plan out which comedians you want to see (J) or go with the flow and see whoever is available (P)?</label><br>
+                    <label><input type="radio" name="question16" value="J" required> J</label>
+                    <label><input type="radio" name="question16" value="P" required> P</label><br><br>
+
+                    <label>17. Would you rather stick to your favorite comedians and their styles (J) or explore new types of humor and improvise your preferences (P)?</label><br>
+                    <label><input type="radio" name="question17" value="J" required> J</label>
+                    <label><input type="radio" name="question17" value="P" required> P</label><br><br>
+
+                    <label>18. Do you feel more comfortable knowing exactly what kind of humor you'll encounter (J) or enjoying the surprise of discovering something new (P)?</label><br>
+                    <label><input type="radio" name="question18" value="J" required> J</label>
+                    <label><input type="radio" name="question18" value="P" required> P</label><br><br>
+
+                    <label>19. Is it better to prepare beforehand for a comedic event by researching it (J) or trust that you'll enjoy it no matter what (P)?</label><br>
+                    <label><input type="radio" name="question19" value="J" required> J</label>
+                    <label><input type="radio" name="question19" value="P" required> P</label><br><br>
+
+                    <label>20. When a joke doesn't land as expected, do you methodically think about how to fix it next time (J) or move on and try something completely different (P)?</label><br>
+                    <label><input type="radio" name="question20" value="J" required> J</label>
+                    <label><input type="radio" name="question20" value="P" required> P</label><br><br>
+
+                </div>
+            </form>
+            <form id="Drama-Genre">
+                <div id="questions-container">
+
+                    <!-- Extraversion (E) vs Introversion (I) -->
+                    <h2>Extraversion (E) vs Introversion (I)</h2>
+                    <label>1. When experiencing a deep emotional moment, do you prefer to express your feelings openly with others (E) or process them internally and privately (I)?</label><br>
+                    <label><input type="radio" name="question1" value="E" required> E</label>
+                    <label><input type="radio" name="question1" value="I" required> I</label><br><br>
+
+                    <label>2. Would you rather discuss your personal struggles with friends to gain perspective (E) or reflect on them alone to find inner clarity (I)?</label><br>
+                    <label><input type="radio" name="question2" value="E" required> E</label>
+                    <label><input type="radio" name="question2" value="I" required> I</label><br><br>
+
+                    <label>3. In a tense dramatic scene, do you feel more comfortable expressing yourself directly to those involved (E) or observing the situation before deciding how to act (I)?</label><br>
+                    <label><input type="radio" name="question3" value="E" required> E</label>
+                    <label><input type="radio" name="question3" value="I" required> I</label><br><br>
+
+                    <label>4. Do you find it easier to connect with others by sharing your emotions in the moment (E) or taking time to articulate your thoughts later (I)?</label><br>
+                    <label><input type="radio" name="question4" value="E" required> E</label>
+                    <label><input type="radio" name="question4" value="I" required> I</label><br><br>
+
+                    <label>5. When faced with a heartfelt conversation, do you engage fully and immediately (E) or take a moment to gather your thoughts before responding (I)?</label><br>
+                    <label><input type="radio" name="question5" value="E" required> E</label>
+                    <label><input type="radio" name="question5" value="I" required> I</label><br><br>
+
+                    <!-- Sensing (S) vs Intuition (N) -->
+                    <h2>Sensing (S) vs Intuition (N)</h2>
+                    <label>6. While watching a dramatic story unfold, do you focus more on the immediate emotions and actions of the characters (S) or try to predict their future choices based on deeper patterns (N)?</label><br>
+                    <label><input type="radio" name="question6" value="S" required> S</label>
+                    <label><input type="radio" name="question6" value="N" required> N</label><br><br>
+
+                    <label>7. Would you rather immerse yourself in the present emotional intensity of a scene (S) or analyze its broader implications and potential outcomes (N)?</label><br>
+                    <label><input type="radio" name="question7" value="S" required> S</label>
+                    <label><input type="radio" name="question7" value="N" required> N</label><br><br>
+
+                    <label>8. Do you prefer stories that explore realistic and tangible human experiences (S) or ones that delve into abstract themes and symbolic meanings (N)?</label><br>
+                    <label><input type="radio" name="question8" value="S" required> S</label>
+                    <label><input type="radio" name="question8" value="N" required> N</label><br><br>
+
+                    <label>9. Is it more impactful to experience emotions as they happen (S) or understand them through a larger narrative or philosophical lens (N)?</label><br>
+                    <label><input type="radio" name="question9" value="S" required> S</label>
+                    <label><input type="radio" name="question9" value="N" required> N</label><br><br>
+
+                    <label>10. Would you rather be moved by the raw authenticity of a character's actions (S) or appreciate the underlying symbolism and deeper meaning behind them (N)?</label><br>
+                    <label><input type="radio" name="question10" value="S" required> S</label>
+                    <label><input type="radio" name="question10" value="N" required> N</label><br><br>
+
+                    <!-- Thinking (T) vs Feeling (F) -->
+                    <h2>Thinking (T) vs Feeling (F)</h2>
+                    <label>11. When resolving a conflict in a dramatic situation, do you prioritize logical reasoning and fairness (T) or consider the emotional impact on everyone involved (F)?</label><br>
+                    <label><input type="radio" name="question11" value="T" required> T</label>
+                    <label><input type="radio" name="question11" value="F" required> F</label><br><br>
+
+                    <label>12. If someone is upset during a dramatic event, do you focus on addressing the practical aspects of the problem (T) or offering emotional support and understanding (F)?</label><br>
+                    <label><input type="radio" name="question12" value="T" required> T</label>
+                    <label><input type="radio" name="question12" value="F" required> F</label><br><br>
+
+                    <label>13. Would you rather approach a dramatic scenario with an analytical mindset to solve it efficiently (T) or prioritize maintaining harmony and emotional balance (F)?</label><br>
+                    <label><input type="radio" name="question13" value="T" required> T</label>
+                    <label><input type="radio" name="question13" value="F" required> F</label><br><br>
+
+                    <label>14. In a heated argument, do you weigh the pros and cons objectively (T) or focus on how the disagreement affects relationships emotionally (F)?</label><br>
+                    <label><input type="radio" name="question14" value="T" required> T</label>
+                    <label><input type="radio" name="question14" value="F" required> F</label><br><br>
+
+                    <label>15. When two characters have opposing views in a drama, do you side with the one whose argument is most logical (T) or empathize with the one who seems more emotionally justified (F)?</label><br>
+                    <label><input type="radio" name="question15" value="T" required> T</label>
+                    <label><input type="radio" name="question15" value="F" required> F</label><br><br>
+
+                    <!-- Judging (J) vs Perceiving (P) -->
+                    <h2>Judging (J) vs Perceiving (P)</h2>
+                    <label>16. Before diving into a dramatic story, do you prefer to know the plot details and character arcs beforehand (J) or enjoy discovering them as the story unfolds (P)?</label><br>
+                    <label><input type="radio" name="question16" value="J" required> J</label>
+                    <label><input type="radio" name="question16" value="P" required> P</label><br><br>
+
+                    <label>17. Would you rather follow the intended emotional journey of a drama closely (J) or allow yourself to interpret and react freely to unexpected twists (P)?</label><br>
+                    <label><input type="radio" name="question17" value="J" required> J</label>
+                    <label><input type="radio" name="question17" value="P" required> P</label><br><br>
+
+                    <label>18. Do you feel more satisfied knowing exactly where the story is heading (J) or enjoying the uncertainty and surprises along the way (P)?</label><br>
+                    <label><input type="radio" name="question18" value="J" required> J</label>
+                    <label><input type="radio" name="question18" value="P" required> P</label><br><br>
+
+                    <label>19. Is it better to prepare emotionally for what might happen in a drama (J) or trust that you'll handle whatever comes naturally (P)?</label><br>
+                    <label><input type="radio" name="question19" value="J" required> J</label>
+                    <label><input type="radio" name="question19" value="P" required> P</label><br><br>
+
+                    <label>20. When a dramatic twist occurs, do you methodically think about how it fits into the overall story (J) or embrace the spontaneity and let it guide your reaction (P)?</label><br>
+                    <label><input type="radio" name="question20" value="J" required> J</label>
+                    <label><input type="radio" name="question20" value="P" required> P</label><br><br>
+
+                </div>
+            </form>
+    
+            <form id="Fantasy-Genre">
+                <div id="questions-container">
+
+                    <!-- Extraversion (E) vs Introversion (I) -->
+                    <h2>Extraversion (E) vs Introversion (I)</h2>
+                    <label>1. When exploring a magical new world, do you dive in with excitement and share your discoveries with others (E) or take time to quietly observe and absorb the details (I)?</label><br>
+                    <label><input type="radio" name="question1" value="E" required> E</label>
+                    <label><input type="radio" name="question1" value="I" required> I</label><br><br>
+
+                    <label>2. Would you rather lead a group of adventurers with boldness and charisma (E) or contribute behind the scenes while ensuring everyone stays safe (I)?</label><br>
+                    <label><input type="radio" name="question2" value="E" required> E</label>
+                    <label><input type="radio" name="question2" value="I" required> I</label><br><br>
+
+                    <label>3. In a fantastical setting, do you find yourself more energized by interacting with mythical creatures and people (E) or reflecting on the deeper meaning of their existence (I)?</label><br>
+                    <label><input type="radio" name="question3" value="E" required> E</label>
+                    <label><input type="radio" name="question3" value="I" required> I</label><br><br>
+
+                    <label>4. If faced with an enchanted artifact, do you immediately test its powers with others (E) or first study it alone to understand its secrets (I)?</label><br>
+                    <label><input type="radio" name="question4" value="E" required> E</label>
+                    <label><input type="radio" name="question4" value="I" required> I</label><br><br>
+
+                    <label>5. When encountering a mysterious prophecy, do you discuss it openly with companions (E) or ponder its meaning in solitude (I)?</label><br>
+                    <label><input type="radio" name="question5" value="E" required> E</label>
+                    <label><input type="radio" name="question5" value="I" required> I</label><br><br>
+
+                    <!-- Sensing (S) vs Intuition (N) -->
+                    <h2>Sensing (S) vs Intuition (N)</h2>
+                    <label>6. While navigating a mystical forest, do you focus on the tangible beauty around you (S) or imagine the hidden magic and possibilities within it (N)?</label><br>
+                    <label><input type="radio" name="question6" value="S" required> S</label>
+                    <label><input type="radio" name="question6" value="N" required> N</label><br><br>
+
+                    <label>7. Would you rather rely on detailed maps and known paths (S) or trust your instincts to uncover secret routes and hidden treasures (N)?</label><br>
+                    <label><input type="radio" name="question7" value="S" required> S</label>
+                    <label><input type="radio" name="question7" value="N" required> N</label><br><br>
+
+                    <label>8. Do you prefer mastering traditional spells passed down through generations (S) or inventing entirely new ones based on your imagination (N)?</label><br>
+                    <label><input type="radio" name="question8" value="S" required> S</label>
+                    <label><input type="radio" name="question8" value="N" required> N</label><br><br>
+
+                    <label>9. Is it more important to stay grounded in the reality of the fantasy world (S) or embrace the limitless potential of its imaginative elements (N)?</label><br>
+                    <label><input type="radio" name="question9" value="S" required> S</label>
+                    <label><input type="radio" name="question9" value="N" required> N</label><br><br>
+
+                    <label>10. Would you rather follow ancient traditions and rituals (S) or create your own unique practices inspired by intuition (N)?</label><br>
+                    <label><input type="radio" name="question10" value="S" required> S</label>
+                    <label><input type="radio" name="question10" value="N" required> N</label><br><br>
+
+                    <!-- Thinking (T) vs Feeling (F) -->
+                    <h2>Thinking (T) vs Feeling (F)</h2>
+                    <label>11. When deciding whether to join a quest, do you base your decision on logical analysis of risks and rewards (T) or consider how it aligns with your values and emotions (F)?</label><br>
+                    <label><input type="radio" name="question11" value="T" required> T</label>
+                    <label><input type="radio" name="question11" value="F" required> F</label><br><br>
+
+                    <label>12. If a teammate disagrees with your plan during a mission, do you focus on explaining the logic behind your choice (T) or try to understand their feelings and adjust accordingly (F)?</label><br>
+                    <label><input type="radio" name="question12" value="T" required> T</label>
+                    <label><input type="radio" name="question12" value="F" required> F</label><br><br>
+
+                    <label>13. Would you prioritize completing the mission efficiently (T) or ensure that everyone feels included and supported throughout the journey (F)?</label><br>
+                    <label><input type="radio" name="question13" value="T" required> T</label>
+                    <label><input type="radio" name="question13" value="F" required> F</label><br><br>
+
+                    <label>14. In a challenging situation, do you weigh the pros and cons objectively (T) or let empathy guide you toward what feels right (F)?</label><br>
+                    <label><input type="radio" name="question14" value="T" required> T</label>
+                    <label><input type="radio" name="question14" value="F" required> F</label><br><br>
+
+                    <label>15. When two friends have differing opinions about the next step in a quest, do you side with the one whose argument is most logical (T) or support the one who seems more emotionally justified (F)?</label><br>
+                    <label><input type="radio" name="question15" value="T" required> T</label>
+                    <label><input type="radio" name="question15" value="F" required> F</label><br><br>
+
+                    <!-- Judging (J) vs Perceiving (P) -->
+                    <h2>Judging (J) vs Perceiving (P)</h2>
+                    <label>16. Before embarking on a magical journey, do you prefer having everything planned out step-by-step (J) or remaining open to changes and spontaneity (P)?</label><br>
+                    <label><input type="radio" name="question16" value="J" required> J</label>
+                    <label><input type="radio" name="question16" value="P" required> P</label><br><br>
+
+                    <label>17. Would you rather stick to your original plan no matter what (J) or adapt freely when unexpected opportunities arise (P)?</label><br>
+                    <label><input type="radio" name="question17" value="J" required> J</label>
+                    <label><input type="radio" name="question17" value="P" required> P</label><br><br>
+
+                    <label>18. Do you feel more comfortable knowing exactly where you're going and what to expect (J) or enjoying the thrill of uncertainty and surprise (P)?</label><br>
+                    <label><input type="radio" name="question18" value="J" required> J</label>
+                    <label><input type="radio" name="question18" value="P" required> P</label><br><br>
+
+                    <label>19. Is it better to prepare thoroughly for every possible scenario (J) or trust that you'll figure things out as you go (P)?</label><br>
+                    <label><input type="radio" name="question19" value="J" required> J</label>
+                    <label><input type="radio" name="question19" value="P" required> P</label><br><br>
+
+                    <label>20. When faced with an unforeseen obstacle, do you methodically work through your options until you find a solution (J) or pivot quickly to try something entirely new (P)?</label><br>
+                    <label><input type="radio" name="question20" value="J" required> J</label>
+                    <label><input type="radio" name="question20" value="P" required> P</label><br><br>
+
+                </div>
+            </form>
+            <form id="Horror-Genre">
+                <div id="questions-container">
+
+                    <!-- Extraversion (E) vs Introversion (I) -->
+                    <h2>Extraversion (E) vs Introversion (I)</h2>
+                    <label>1. When encountering a terrifying situation, do you instinctively seek help or company from others (E) or prefer to face it alone to avoid burdening others (I)?</label><br>
+                    <label><input type="radio" name="question1" value="E" required> E</label>
+                    <label><input type="radio" name="question1" value="I" required> I</label><br><br>
+
+                    <label>2. Would you rather lead a group in escaping danger by taking charge and motivating others (E) or quietly assess the situation and guide the group subtly (I)?</label><br>
+                    <label><input type="radio" name="question2" value="E" required> E</label>
+                    <label><input type="radio" name="question2" value="I" required> I</label><br><br>
+
+                    <label>3. In a haunted location, do you find comfort in sharing your fears with others (E) or cope better by processing your emotions internally (I)?</label><br>
+                    <label><input type="radio" name="question3" value="E" required> E</label>
+                    <label><input type="radio" name="question3" value="I" required> I</label><br><br>
+
+                    <label>4. If you hear strange noises at night, do you immediately investigate with others (E) or wait silently to gather more information before acting (I)?</label><br>
+                    <label><input type="radio" name="question4" value="E" required> E</label>
+                    <label><input type="radio" name="question4" value="I" required> I</label><br><br>
+
+                    <label>5. During a horror-filled event, do you express your fear openly to relieve tension (E) or keep it to yourself to maintain composure (I)?</label><br>
+                    <label><input type="radio" name="question5" value="E" required> E</label>
+                    <label><input type="radio" name="question5" value="I" required> I</label><br><br>
+
+                    <!-- Sensing (S) vs Intuition (N) -->
+                    <h2>Sensing (S) vs Intuition (N)</h2>
+                    <label>6. While exploring a creepy environment, do you focus on the immediate sensory details like sounds and smells (S) or try to interpret the underlying ominous signs and patterns (N)?</label><br>
+                    <label><input type="radio" name="question6" value="S" required> S</label>
+                    <label><input type="radio" name="question6" value="N" required> N</label><br><br>
+
+                    <label>7. Would you rather rely on tangible evidence and logical reasoning to solve a mystery (S) or trust your gut feelings and intuition about what might happen next (N)?</label><br>
+                    <label><input type="radio" name="question7" value="S" required> S</label>
+                    <label><input type="radio" name="question7" value="N" required> N</label><br><br>
+
+                    <label>8. Do you prefer analyzing the physical clues left behind by a supernatural entity (S) or imagine the broader implications of its existence (N)?</label><br>
+                    <label><input type="radio" name="question8" value="S" required> S</label>
+                    <label><input type="radio" name="question8" value="N" required> N</label><br><br>
+
+                    <label>9. Is it more important to stay grounded in reality and deal with the present danger (S) or consider the long-term consequences of supernatural forces (N)?</label><br>
+                    <label><input type="radio" name="question9" value="S" required> S</label>
+                    <label><input type="radio" name="question9" value="N" required> N</label><br><br>
+
+                    <label>10. Would you rather follow a clear plan based on past experiences (S) or adapt to unexpected twists using your imagination and creativity (N)?</label><br>
+                    <label><input type="radio" name="question10" value="S" required> S</label>
+                    <label><input type="radio" name="question10" value="N" required> N</label><br><br>
+
+                    <!-- Thinking (T) vs Feeling (F) -->
+                    <h2>Thinking (T) vs Feeling (F)</h2>
+                    <label>11. When deciding how to handle a dangerous threat, do you base your decision on logical analysis of risks and outcomes (T) or consider the emotional well-being of those involved (F)?</label><br>
+                    <label><input type="radio" name="question11" value="T" required> T</label>
+                    <label><input type="radio" name="question11" value="F" required> F</label><br><br>
+
+                    <label>12. If a teammate panics during a horrifying event, do you focus on calming them with practical advice (T) or offer emotional support to help them regain composure (F)?</label><br>
+                    <label><input type="radio" name="question12" value="T" required> T</label>
+                    <label><input type="radio" name="question12" value="F" required> F</label><br><br>
+
+                    <label>13. Would you prioritize neutralizing the threat efficiently (T) or ensure that everyone's feelings are respected and supported throughout the ordeal (F)?</label><br>
+                    <label><input type="radio" name="question13" value="T" required> T</label>
+                    <label><input type="radio" name="question13" value="F" required> F</label><br><br>
+
+                    <label>14. In a life-or-death situation, do you weigh the pros and cons objectively (T) or let empathy guide you toward what feels morally right (F)?</label><br>
+                    <label><input type="radio" name="question14" value="T" required> T</label>
+                    <label><input type="radio" name="question14" value="F" required> F</label><br><br>
+
+                    <label>15. When two friends disagree on how to survive a horror scenario, do you side with the one whose reasoning is most logical (T) or support the one who seems more emotionally justified (F)?</label><br>
+                    <label><input type="radio" name="question15" value="T" required> T</label>
+                    <label><input type="radio" name="question15" value="F" required> F</label><br><br>
+
+                    <!-- Judging (J) vs Perceiving (P) -->
+                    <h2>Judging (J) vs Perceiving (P)</h2>
+                    <label>16. Before entering a potentially dangerous area, do you prefer having a detailed escape plan mapped out (J) or remain flexible and improvise as needed (P)?</label><br>
+                    <label><input type="radio" name="question16" value="J" required> J</label>
+                    <label><input type="radio" name="question16" value="P" required> P</label><br><br>
+
+                    <label>17. Would you rather stick to your original survival strategy no matter what (J) or adapt freely when unexpected challenges arise (P)?</label><br>
+                    <label><input type="radio" name="question17" value="J" required> J</label>
+                    <label><input type="radio" name="question17" value="P" required> P</label><br><br>
+
+                    <label>18. Do you feel more secure knowing exactly what to expect in a scary situation (J) or enjoy the unpredictability and excitement of not knowing (P)?</label><br>
+                    <label><input type="radio" name="question18" value="J" required> J</label>
+                    <label><input type="radio" name="question18" value="P" required> P</label><br><br>
+
+                    <label>19. Is it better to prepare meticulously for every possible horror scenario (J) or trust that you'll handle whatever comes naturally (P)?</label><br>
+                    <label><input type="radio" name="question19" value="J" required> J</label>
+                    <label><input type="radio" name="question19" value="P" required> P</label><br><br>
+
+                    <label>20. When faced with an unknown horror, do you methodically analyze your options until you find a solution (J) or pivot quickly to try something entirely new (P)?</label><br>
+                    <label><input type="radio" name="question20" value="J" required> J</label>
+                    <label><input type="radio" name="question20" value="P" required> P</label><br><br>
+
+                </div>
+            </form>
+            <form id="Romance-Genre">
+                <div id="questions-container">
+
+                    <!-- Extraversion (E) vs Introversion (I) -->
+                    <h2>Extraversion (E) vs Introversion (I)</h2>
+                    <label>1. When falling in love, do you express your feelings openly and enthusiastically with others (E) or take time to quietly reflect on your emotions before sharing them (I)?</label><br>
+                    <label><input type="radio" name="question1" value="E" required> E</label>
+                    <label><input type="radio" name="question1" value="I" required> I</label><br><br>
+
+                    <label>2. Would you rather spend time with your partner in large social gatherings (E) or cherish quiet moments together in solitude (I)?</label><br>
+                    <label><input type="radio" name="question2" value="E" required> E</label>
+                    <label><input type="radio" name="question2" value="I" required> I</label><br><br>
+
+                    <label>3. In a romantic scenario, do you feel more energized by interacting with your partner and their friends (E) or enjoying intimate one-on-one time (I)?</label><br>
+                    <label><input type="radio" name="question3" value="E" required> E</label>
+                    <label><input type="radio" name="question3" value="I" required> I</label><br><br>
+
+                    <label>4. If planning a date, do you prefer involving others to make it lively and fun (E) or creating a peaceful and personal atmosphere just for two (I)?</label><br>
+                    <label><input type="radio" name="question4" value="E" required> E</label>
+                    <label><input type="radio" name="question4" value="I" required> I</label><br><br>
+
+                    <label>5. During a heartfelt moment, do you share your thoughts and feelings immediately (E) or take time to process them internally before expressing yourself (I)?</label><br>
+                    <label><input type="radio" name="question5" value="E" required> E</label>
+                    <label><input type="radio" name="question5" value="I" required> I</label><br><br>
+
+                    <!-- Sensing (S) vs Intuition (N) -->
+                    <h2>Sensing (S) vs Intuition (N)</h2>
+                    <label>6. While on a date, do you focus more on the immediate sensory pleasures like food and ambiance (S) or imagine the deeper connection and future possibilities with your partner (N)?</label><br>
+                    <label><input type="radio" name="question6" value="S" required> S</label>
+                    <label><input type="radio" name="question6" value="N" required> N</label><br><br>
+
+                    <label>7. Would you rather build a relationship based on shared experiences and tangible memories (S) or explore abstract ideas and dreams about what could be (N)?</label><br>
+                    <label><input type="radio" name="question7" value="S" required> S</label>
+                    <label><input type="radio" name="question7" value="N" required> N</label><br><br>
+
+                    <label>8. Do you prefer focusing on the present moment and enjoying the romance as it unfolds (S) or envisioning long-term plans and aspirations with your partner (N)?</label><br>
+                    <label><input type="radio" name="question8" value="S" required> S</label>
+                    <label><input type="radio" name="question8" value="N" required> N</label><br><br>
+
+                    <label>9. Is it more important to stay grounded in reality and enjoy the romance of today (S) or dream about the ideal future and all its possibilities (N)?</label><br>
+                    <label><input type="radio" name="question9" value="S" required> S</label>
+                    <label><input type="radio" name="question9" value="N" required> N</label><br><br>
+
+                    <label>10. Would you rather appreciate the beauty of small, everyday gestures of love (S) or value the grand, symbolic acts that represent deeper meaning (N)?</label><br>
+                    <label><input type="radio" name="question10" value="S" required> S</label>
+                    <label><input type="radio" name="question10" value="N" required> N</label><br><br>
+
+                    <!-- Thinking (T) vs Feeling (F) -->
+                    <h2>Thinking (T) vs Feeling (F)</h2>
+                    <label>11. When resolving a disagreement with your partner, do you prioritize logical reasoning and fairness (T) or consider the emotional impact on both of you (F)?</label><br>
+                    <label><input type="radio" name="question11" value="T" required> T</label>
+                    <label><input type="radio" name="question11" value="F" required> F</label><br><br>
+
+                    <label>12. If your partner is upset, do you focus on addressing the practical aspects of the problem (T) or offer emotional support and understanding (F)?</label><br>
+                    <label><input type="radio" name="question12" value="T" required> T</label>
+                    <label><input type="radio" name="question12" value="F" required> F</label><br><br>
+
+                    <label>13. Would you approach relationship challenges with an analytical mindset to solve them efficiently (T) or prioritize maintaining harmony and emotional balance (F)?</label><br>
+                    <label><input type="radio" name="question13" value="T" required> T</label>
+                    <label><input type="radio" name="question13" value="F" required> F</label><br><br>
+
+                    <label>14. In a romantic situation, do you weigh the pros and cons objectively (T) or let your heart guide you toward what feels right emotionally (F)?</label><br>
+                    <label><input type="radio" name="question14" value="T" required> T</label>
+                    <label><input type="radio" name="question14" value="F" required> F</label><br><br>
+
+                    <label>15. When two partners have differing opinions, do you side with the one whose argument is most logical (T) or empathize with the one who seems more emotionally justified (F)?</label><br>
+                    <label><input type="radio" name="question15" value="T" required> T</label>
+                    <label><input type="radio" name="question15" value="F" required> F</label><br><br>
+
+                    <!-- Judging (J) vs Perceiving (P) -->
+                    <h2>Judging (J) vs Perceiving (P)</h2>
+                    <label>16. Before starting a new relationship, do you prefer having clear expectations and boundaries established (J) or remain open and flexible to see where things go (P)?</label><br>
+                    <label><input type="radio" name="question16" value="J" required> J</label>
+                    <label><input type="radio" name="question16" value="P" required> P</label><br><br>
+
+                    <label>17. Would you rather follow a well-defined plan for your relationship's future (J) or embrace spontaneity and let things evolve naturally (P)?</label><br>
+                    <label><input type="radio" name="question17" value="J" required> J</label>
+                    <label><input type="radio" name="question17" value="P" required> P</label><br><br>
+
+                    <label>18. Do you feel more comfortable knowing exactly where your relationship stands (J) or enjoying the excitement of uncertainty and surprise (P)?</label><br>
+                    <label><input type="radio" name="question18" value="J" required> J</label>
+                    <label><input type="radio" name="question18" value="P" required> P</label><br><br>
+
+                    <label>19. Is it better to prepare thoroughly for potential challenges in a relationship (J) or trust that you'll handle whatever comes naturally (P)?</label><br>
+                    <label><input type="radio" name="question19" value="J" required> J</label>
+                    <label><input type="radio" name="question19" value="P" required> P</label><br><br>
+
+                    <label>20. When faced with a relationship decision, do you methodically analyze your options until you find a solution (J) or pivot quickly to try something entirely new (P)?</label><br>
+                    <label><input type="radio" name="question20" value="J" required> J</label>
+                    <label><input type="radio" name="question20" value="P" required> P</label><br><br>
+
+                </div>
+            </form>
+            <form id="SciFi-Genre">
+                <div id="questions-container">
+
+                    <!-- Extraversion (E) vs Introversion (I) -->
+                    <h2>Extraversion (E) vs Introversion (I)</h2>
+                    <label>1. When exploring a new futuristic world, do you immediately engage with others to share your excitement (E) or take time to quietly observe and process the experience (I)?</label><br>
+                    <label><input type="radio" name="question1" value="E" required> E</label>
+                    <label><input type="radio" name="question1" value="I" required> I</label><br><br>
+
+                    <label>2. Would you rather lead a team in experimenting with cutting-edge technology by inspiring others (E) or contribute behind the scenes while ensuring everything runs smoothly (I)?</label><br>
+                    <label><input type="radio" name="question2" value="E" required> E</label>
+                    <label><input type="radio" name="question2" value="I" required> I</label><br><br>
+
+                    <label>3. In a high-tech environment, do you find yourself more energized by collaborating with others on projects (E) or working independently to solve complex problems (I)?</label><br>
+                    <label><input type="radio" name="question3" value="E" required> E</label>
+                    <label><input type="radio" name="question3" value="I" required> I</label><br><br>
+
+                    <label>4. If faced with an advanced alien species, do you immediately try to communicate and connect with them (E) or first analyze their behavior from a distance (I)?</label><br>
+                    <label><input type="radio" name="question4" value="E" required> E</label>
+                    <label><input type="radio" name="question4" value="I" required> I</label><br><br>
+
+                    <label>5. During a space mission, do you openly discuss ideas with the crew (E) or reflect on strategies privately before sharing them (I)?</label><br>
+                    <label><input type="radio" name="question5" value="E" required> E</label>
+                    <label><input type="radio" name="question5" value="I" required> I</label><br><br>
+
+                    <!-- Sensing (S) vs Intuition (N) -->
+                    <h2>Sensing (S) vs Intuition (N)</h2>
+                    <label>6. While analyzing futuristic data, do you focus on the concrete details and immediate applications (S) or imagine the broader implications and possibilities they suggest (N)?</label><br>
+                    <label><input type="radio" name="question6" value="S" required> S</label>
+                    <label><input type="radio" name="question6" value="N" required> N</label><br><br>
+
+                    <label>7. Would you rather rely on proven scientific methods and established theories (S) or trust your intuition to explore untested hypotheses (N)?</label><br>
+                    <label><input type="radio" name="question7" value="S" required> S</label>
+                    <label><input type="radio" name="question7" value="N" required> N</label><br><br>
+
+                    <label>8. Do you prefer mastering existing technologies and systems (S) or inventing entirely new ones based on your imagination (N)?</label><br>
+                    <label><input type="radio" name="question8" value="S" required> S</label>
+                    <label><input type="radio" name="question8" value="N" required> N</label><br><br>
+
+                    <label>9. Is it more important to stay grounded in the reality of current technology (S) or embrace the limitless potential of future advancements (N)?</label><br>
+                    <label><input type="radio" name="question9" value="S" required> S</label>
+                    <label><input type="radio" name="question9" value="N" required> N</label><br><br>
+
+                    <label>10. Would you rather follow established protocols and procedures (S) or create your own unique solutions inspired by creative thinking (N)?</label><br>
+                    <label><input type="radio" name="question10" value="S" required> S</label>
+                    <label><input type="radio" name="question10" value="N" required> N</label><br><br>
+
+                    <!-- Thinking (T) vs Feeling (F) -->
+                    <h2>Thinking (T) vs Feeling (F)</h2>
+                    <label>11. When deciding whether to pursue a risky technological advancement, do you base your decision on logical analysis of risks and benefits (T) or consider how it aligns with ethical values and emotions (F)?</label><br>
+                    <label><input type="radio" name="question11" value="T" required> T</label>
+                    <label><input type="radio" name="question11" value="F" required> F</label><br><br>
+
+                    <label>12. If a teammate disagrees with your plan for a space exploration mission, do you focus on explaining the logic behind your choice (T) or try to understand their feelings and adjust accordingly (F)?</label><br>
+                    <label><input type="radio" name="question12" value="T" required> T</label>
+                    <label><input type="radio" name="question12" value="F" required> F</label><br><br>
+
+                    <label>13. Would you prioritize completing a project efficiently (T) or ensure that everyone feels included and supported throughout the process (F)?</label><br>
+                    <label><input type="radio" name="question13" value="T" required> T</label>
+                    <label><input type="radio" name="question13" value="F" required> F</label><br><br>
+
+                    <label>14. In a challenging situation involving advanced technology, do you weigh the pros and cons objectively (T) or let empathy guide you toward what feels right (F)?</label><br>
+                    <label><input type="radio" name="question14" value="T" required> T</label>
+                    <label><input type="radio" name="question14" value="F" required> F</label><br><br>
+
+                    <label>15. When two colleagues have differing opinions about the next step in a research project, do you side with the one whose argument is most logical (T) or support the one who seems more emotionally justified (F)?</label><br>
+                    <label><input type="radio" name="question15" value="T" required> T</label>
+                    <label><input type="radio" name="question15" value="F" required> F</label><br><br>
+
+                    <!-- Judging (J) vs Perceiving (P) -->
+                    <h2>Judging (J) vs Perceiving (P)</h2>
+                    <label>16. Before embarking on a space exploration mission, do you prefer having everything planned out step-by-step (J) or remaining open to changes and spontaneity (P)?</label><br>
+                    <label><input type="radio" name="question16" value="J" required> J</label>
+                    <label><input type="radio" name="question16" value="P" required> P</label><br><br>
+
+                    <label>17. Would you rather stick to your original plan no matter what (J) or adapt freely when unexpected opportunities arise (P)?</label><br>
+                    <label><input type="radio" name="question17" value="J" required> J</label>
+                    <label><input type="radio" name="question17" value="P" required> P</label><br><br>
+
+                    <label>18. Do you feel more comfortable knowing exactly where your research or mission is heading (J) or enjoying the thrill of uncertainty and surprise (P)?</label><br>
+                    <label><input type="radio" name="question18" value="J" required> J</label>
+                    <label><input type="radio" name="question18" value="P" required> P</label><br><br>
+
+                    <label>19. Is it better to prepare thoroughly for every possible scenario in a sci-fi setting (J) or trust that you'll figure things out as you go (P)?</label><br>
+                    <label><input type="radio" name="question19" value="J" required> J</label>
+                    <label><input type="radio" name="question19" value="P" required> P</label><br><br>
+
+                    <label>20. When faced with an unforeseen technical issue, do you methodically work through your options until you find a solution (J) or pivot quickly to try something entirely new (P)?</label><br>
+                    <label><input type="radio" name="question20" value="J" required> J</label>
+                    <label><input type="radio" name="question20" value="P" required> P</label><br><br>
+
+                </div>
+            </form>
+            <!-- Open-ended Questions Section -->
+<div id="textQuestionsSection" style="margin-top: 30px;">
+    <h2>FINAL QUESTIONS</h2>
+ 
+    <label for="questionWhyAnime">1. In your own words, why do you watch anime? Is it for entertainment only or something deeper like FOMO or trends?</label><br>
+    <textarea id="questionWhyAnime" name="questionWhyAnime" rows="4" cols="60" required></textarea><br><br>
+    
+    <label for="questionPersonalityImpact">2. Does your personality affect the anime genres you watch? How so?</label><br>
+    <textarea id="questionPersonalityImpact" name="questionPersonalityImpact" rows="4" cols="60" required></textarea><br><br>
+</div>
+
+<!-- Submit Button -->
+<button type="button" onclick="submitSurvey()">Submit Survey</button>
+
+           
+        </section>
+
+
+
+    <script>
+        function goToNextPage() {
+            // Hide all other sections
+            document.querySelectorAll('.form-section').forEach(section => section.style.display = 'none');
+            
+            // Get selected genres
+            const selectedGenres = Array.from(document.querySelectorAll('#genreCheckboxes input[type="checkbox"]:checked'))
+                .map(checkbox => checkbox.value);
+
+            // Debugging: Log selected genres
+            console.log('Selected genres:', selectedGenres);
+
+            // Clear the survey-questions section
+            const surveyQuestionsSection = document.getElementById('survey-questions');
+            surveyQuestionsSection.innerHTML = '<h2>Answer the Questions</h2>'; // Reset with a header
+
+            // Add questions grouped by genre
+            selectedGenres.forEach(genre => {
+                const form = document.getElementById(`${genre}-Genre`);
+                if (form) {
+                    // Create a container for the genre
+                    const genreContainer = document.createElement('div');
+                    genreContainer.className = 'genre-container';
+                    genreContainer.style.marginBottom = '20px';
+
+                    // Add the genre title
+                    const title = document.createElement('h3');
+                    title.textContent = genre;
+                    title.style.textDecoration = 'underline';
+                    genreContainer.appendChild(title);
+
+                    // Clone the form's questions and append them
+                    const questions = form.querySelector('#questions-container').cloneNode(true);
+                    genreContainer.appendChild(questions);
+
+                    // Append the genre container to the survey-questions section
+                    surveyQuestionsSection.appendChild(genreContainer);
+
+                    console.log(`Added questions for genre: ${genre}`);
+                } else {
+                    console.error(`Form for genre "${genre}" not found.`);
+                }
+            });
+
+            // Ensure the survey-questions section is visible
+            surveyQuestionsSection.style.display = 'block';
+        }
+
+        // Debugging: Ensure the popup function is called and DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM fully loaded and parsed. Calling showSurveyIntroduction().');
+            showSurveyIntroduction();
+        });
+
+        function submitSurvey() {
+            // Redirect to Thank You Page
+            document.body.innerHTML = `
+                <div style="text-align: center; margin-top: 50px;">
+                    <h1>Thank You for Completing the Survey!</h1>
+                    <img src="https://gifdb.com/images/thumbnail/kazuma-sato-thank-you-anime-funny-dance-vaqdl5j1387ekr0x.gif" alt="Thank You" style="max-width: 100%; height: auto;">
+                </div>
+            `;
+        }
+    </script>
+    
+</body>
+</html>
