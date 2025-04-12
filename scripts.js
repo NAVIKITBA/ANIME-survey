@@ -168,21 +168,21 @@ function submitSurvey() {
             MBTI_Fantasy: '',
             MBTI_Horror: '',
             MBTI_Romance: '',
-            MBTI_SciFi: '', 
-            txtQuestions: '', 
-            MBTI_Results: '' 
+            MBTI_SciFi: '', // Ensure Sci-Fi header is included
+            txtQuestions: '', // Add header for text questions
+            MBTI_Results: '' // Add header for MBTI personality result
         };
 
-        
+        // Collect data from the Information Table
         infoForm.forEach((value, key) => {
             if (key === 'gender') {
-                data['Gender'] = value; 
+                data['Gender'] = value; // Map gender to the correct Google Sheets header
             } else {
                 data[key] = value;
             }
         });
 
-       
+        // Collect data from UGT Questions and format as Q1=1 Q2=3...
         const ugtData = [];
         ugtForm.forEach((value, key) => {
             if (key.startsWith('question')) {
@@ -191,12 +191,12 @@ function submitSurvey() {
         });
         data['UGT_Questions'] = ugtData.join(' ');
 
-        
+        // Collect selected genres
         const selectedGenres = getSelectedGenres();
         if (selectedGenres.length > 0) {
             data['GenreSelection'] = selectedGenres.join(', ');
 
-            
+            // Collect MBTI responses for each selected genre
             selectedGenres.forEach(genre => {
                 const genreForm = document.getElementById(`${genre}-Genre`);
                 if (genreForm) {
@@ -209,7 +209,7 @@ function submitSurvey() {
                 }
             });
 
-            
+            // Explicitly ensure Sci-Fi genre is included in the data collection
             if (selectedGenres.includes('Sci-Fi')) {
                 const sciFiForm = document.getElementById('SciFi-Genre');
                 if (sciFiForm) {
@@ -223,7 +223,7 @@ function submitSurvey() {
             }
         }
 
-        
+        // Collect answers from textQuestionsSection
         const textQuestionsSection = document.getElementById('textQuestionsSection');
         if (textQuestionsSection) {
             const textInputs = textQuestionsSection.querySelectorAll('textarea, input[type="text"]');
@@ -236,11 +236,11 @@ function submitSurvey() {
             data['txtQuestions'] = textData.join(' '); // Save text questions data
         }
 
-        
+        // Calculate MBTI personality
         const mbtiResult = calculateMBTIPersonality();
         data['MBTI_Results'] = `${mbtiResult.personalityType} - ${mbtiResult.description}`; // Save MBTI result
 
-        /
+        // Validate required fields
         if (!data.pseudonym || !data.age || !data.email || !data.watchFrequency || !data.yearLevel || !data.Gender) {
             alert('Please fill out all required fields in the Information Table.');
             return;
@@ -256,14 +256,14 @@ function submitSurvey() {
             return;
         }
 
-        
+        // Submit combined data to Google Sheets
         fetch('https://sheetdb.io/api/v1/1ojx9z1slwmk1', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ data }) 
+            body: JSON.stringify({ data }) // Wrap data in a "data" object as required by SheetDB
         }).then(response => {
             if (response.ok) {
-                
+                // Redirect to Thank You Page
                 document.body.innerHTML = `
                     <div style="text-align: center; margin-top: 50px;">
                         <h1>Thank You for Completing the Survey!</h1>
@@ -271,7 +271,7 @@ function submitSurvey() {
                     </div>
                 `;
 
-                
+                // Show MBTI Personality Popup on Thank You Page
                 setTimeout(() => {
                     showMBTIPopup(mbtiResult.personalityType, mbtiResult.description);
                 }, 500);
@@ -292,7 +292,7 @@ function submitSurvey() {
 }
 
 function showMBTIPopup(personalityType, description) {
-    
+    // Create the popup container
     const popup = document.createElement('div');
     popup.id = 'mbtiPopup';
     popup.style.position = 'fixed';
@@ -301,7 +301,7 @@ function showMBTIPopup(personalityType, description) {
     popup.style.transform = 'translate(-50%, -50%)';
     popup.style.width = '80%';
     popup.style.maxWidth = '500px';
-    popup.style.backgroundColor = 'rgba(0, 0, 0, 0.9)'; 
+    popup.style.backgroundColor = 'rgba(0, 0, 0, 0.9)'; // Dark background
     popup.style.color = 'white';
     popup.style.borderRadius = '10px';
     popup.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
@@ -311,7 +311,7 @@ function showMBTIPopup(personalityType, description) {
     popup.style.opacity = '0';
     popup.style.animation = 'fadeIn 0.5s forwards'; // Fade-in animation
 
-    
+    // Add content to the popup
     popup.innerHTML = `
         <h2>Your MBTI Personality</h2>
         <p><strong>${personalityType}</strong></p>
@@ -319,19 +319,19 @@ function showMBTIPopup(personalityType, description) {
         <button id="closePopupBtn" style="margin-top: 20px; padding: 10px 20px; background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer;">Close</button>
     `;
 
-    
+    // Append the popup to the body
     document.body.appendChild(popup);
 
-    
+    // Add event listener to close the popup
     const closePopupBtn = document.getElementById('closePopupBtn');
     closePopupBtn.addEventListener('click', () => {
-        popup.style.animation = 'fadeOut 0.5s forwards'; 
+        popup.style.animation = 'fadeOut 0.5s forwards'; // Fade-out animation
         setTimeout(() => {
             popup.remove();
-        }, 500); 
+        }, 500); // Wait for the fade-out animation to complete
     });
 
-    
+    // Add keyframe animations to the document
     const style = document.createElement('style');
     style.innerHTML = `
         @keyframes fadeIn {
@@ -347,20 +347,20 @@ function showMBTIPopup(personalityType, description) {
     document.head.appendChild(style);
 }
 
-
+// Ensure genre names appear alongside questions
 function displaySelectedGenres(selectedGenres) {
     const genreNamesContainer = document.getElementById('selectedGenreNames');
     if (genreNamesContainer) {
-        genreNamesContainer.innerHTML = ''; 
+        genreNamesContainer.innerHTML = ''; // Clear previous names
         selectedGenres.forEach(genre => {
             const genreName = document.createElement('p');
-            genreName.textContent = genre; 
-            genreName.style.margin = '10px 0'; 
-            genreName.style.textAlign = 'center'; 
+            genreName.textContent = genre; // Display the genre name directly
+            genreName.style.margin = '10px 0'; // Add spacing between genre names
+            genreName.style.textAlign = 'center'; // Center-align the genre name
             genreNamesContainer.appendChild(genreName);
         });
 
-        
+        // Move the genre names container under the "Next" button
         const nextButton = document.querySelector('#nextButton');
         if (nextButton && nextButton.parentNode) {
             nextButton.parentNode.appendChild(genreNamesContainer);
@@ -370,7 +370,7 @@ function displaySelectedGenres(selectedGenres) {
     }
 }
 
-
+// Add a popup to notify users to scroll down
 function showScrollDownPopup() {
     const popup = document.createElement('div');
     popup.id = 'scrollDownPopup';
@@ -390,13 +390,13 @@ function showScrollDownPopup() {
 
     document.body.appendChild(popup);
 
-    
+    // Automatically remove the popup after 5 seconds
     setTimeout(() => {
         popup.remove();
     }, 5000);
 }
 
-
+// Updated goToNextPage function to include genre names
 function goToNextPage() {
     const selectedGenres = Array.from(document.querySelectorAll('input[name="genre"]:checked')).map(cb => cb.value);
 
@@ -410,26 +410,26 @@ function goToNextPage() {
         return;
     }
 
-    
+    // Hide the genre selection section
     document.getElementById('genreSelection').style.display = 'none';
 
-    
+    // Show the survey questions section
     document.getElementById('survey-questions').style.display = 'block';
 
-    
+    // Hide all genre forms initially
     const genreForms = document.querySelectorAll('form[id$="-Genre"]');
     genreForms.forEach(form => form.style.display = 'none');
 
-    
+    // Show forms for the selected genres
     selectedGenres.forEach(genre => {
         const genreForm = document.getElementById(`${genre}-Genre`);
         if (genreForm) {
             genreForm.style.display = 'block';
 
-            
+            // Display the genre name in the questions part
             const genreTitle = genreForm.querySelector('.genre-title');
             if (genreTitle) {
-                genreTitle.textContent = `Questions for ${genre}`; 
+                genreTitle.textContent = `Questions for ${genre}`; // Set the genre name dynamically
             } else {
                 console.warn(`Genre title element not found for genre: ${genre}`);
             }
@@ -438,10 +438,10 @@ function goToNextPage() {
         }
     });
 
-    
+    // Display the names of the selected genres
     displaySelectedGenres(selectedGenres);
 
-    
+    // Explicitly ensure Sci-Fi genre is handled correctly
     if (selectedGenres.includes('Sci-Fi')) {
         const sciFiForm = document.getElementById('SciFi-Genre');
         if (sciFiForm) {
@@ -452,11 +452,11 @@ function goToNextPage() {
         }
     }
 
-    
+    // Show the scroll down popup
     showScrollDownPopup();
 }
 
-
+// Function to apply consistent styling to the "Answer the Questions" section
 function styleAnswerQuestionsSection() {
     const answerQuestionsSection = document.querySelector('#survey-questions');
     if (answerQuestionsSection) {
@@ -468,10 +468,10 @@ function styleAnswerQuestionsSection() {
         answerQuestionsSection.style.margin = '40px auto';
         answerQuestionsSection.style.width = '70%';
         answerQuestionsSection.style.maxWidth = '800px';
-        answerQuestionsSection.style.textAlign = 'center'; 
+        answerQuestionsSection.style.textAlign = 'center'; // Center-align text
         answerQuestionsSection.style.fontFamily = 'Arial, sans-serif';
         answerQuestionsSection.style.lineHeight = '1.6';
-        answerQuestionsSection.style.display = 'flex'; 
+        answerQuestionsSection.style.display = 'flex'; // Use flexbox for centering
         answerQuestionsSection.style.flexDirection = 'column';
         answerQuestionsSection.style.alignItems = 'center';
         answerQuestionsSection.style.justifyContent = 'center';
@@ -480,7 +480,7 @@ function styleAnswerQuestionsSection() {
     }
 }
 
-
+// Apply consistent styling on page load
 document.addEventListener('DOMContentLoaded', () => {
     const checkboxes = document.querySelectorAll('input[name="genre"]');
     checkboxes.forEach(checkbox => {
@@ -507,17 +507,17 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        
+        // Hide all genre forms initially
         const genreForms = document.querySelectorAll('.genre-form');
         genreForms.forEach(form => form.style.display = 'none');
 
-        
+        // Show forms for selected genres
         selectedGenres.forEach(genre => {
             const genreForm = document.getElementById(`${genre}-Genre`);
             if (genreForm) {
                 genreForm.style.display = 'block';
 
-                
+                // Display the genre name in the questions part
                 const genreTitle = genreForm.querySelector('.genre-title');
                 if (genreTitle) {
                     genreTitle.textContent = `Questions for ${genre}`;
@@ -525,18 +525,18 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        
+        // Display the names of the selected genres with their corresponding forms
         const genreNamesContainer = document.getElementById('selectedGenreNames');
         if (genreNamesContainer) {
-            genreNamesContainer.innerHTML = ''; 
+            genreNamesContainer.innerHTML = ''; // Clear previous names
             selectedGenres.forEach(genre => {
                 const genreName = document.createElement('p');
-                genreName.textContent = genre; 
+                genreName.textContent = genre; // Display the genre name directly
                 genreNamesContainer.appendChild(genreName);
             });
         }
 
-        
+        // Transition to the survey questions section
         document.getElementById('genreSelection').style.display = 'none';
         document.getElementById('survey-questions').style.display = 'block';
     });
@@ -556,7 +556,7 @@ function calculateMBTIPersonality() {
         P: 0
     };
 
-    
+    // Get all survey questions
     const surveySection = document.getElementById('survey-questions');
     const inputs = surveySection.querySelectorAll('input[type="radio"]:checked');
 
@@ -568,20 +568,20 @@ function calculateMBTIPersonality() {
         }
     });
 
-    
+    // Determine the MBTI personality
     const personality = `${traits.E >= traits.I ? 'E' : 'I'}${traits.S >= traits.N ? 'S' : 'N'}${traits.T >= traits.F ? 'T' : 'F'}${traits.J >= traits.P ? 'J' : 'P'}`;
 
-    
+    // Personality type description
     const personalityDescriptions = {
         "ESTJ": "ESTJ - The Organized: Logical, organized, and assertive. You like to manage and make decisions.",
         "ESFJ": "ESFJ - The Supporter: Warm, empathetic, and cooperative. You value harmony and relationships.",
         "ENTJ": "ENTJ - The Planner: Decisive, strategic, and leadership-driven. You enjoy planning and taking charge.",
-        "ENFJ": "ENFJ - The One: Charismatic, inspiring, and empathetic. You seek to help others grow.",
+        "ENFJ": "ENFJ - The Encourager: Charismatic, inspiring, and empathetic. You seek to help others grow.",
         "ISTJ": "ISTJ - The Reliable One: Practical, responsible, and detail-oriented. You prefer structure and reliability.",
-        "ISFJ": "ISFJ - The Keeper: Caring, supportive, and loyal. You prioritize helping others and maintaining stability.",
+        "ISFJ": "ISFJ - The Quiet Caregiver: Caring, supportive, and loyal. You prioritize helping others and maintaining stability.",
         "INTJ": "INTJ - The Architect: Innovative, independent, and strategic. You focus on long-term goals and improvements.",
         "INFJ": "INFJ - The Listener: Insightful, compassionate, and principled. You are driven by a deep sense of purpose.",
-        "ESTP": "ESTP - The Hands-on Doer: Energetic, bold, and action-oriented. You enjoy new experiences and challenges.",
+        "ESTP": "ESTP - The Hands-On Doer: Energetic, bold, and action-oriented. You enjoy new experiences and challenges.",
         "ESFP": "ESFP - The People Person: Fun-loving, spontaneous, and social. You seek excitement and enjoy living in the moment.",
         "ENTP": "ENTP - The Debater: Inventive, curious, and quick-witted. You enjoy engaging in challenging intellectual discussions.",
         "ENFP": "ENFP - The Optimist: Enthusiastic, creative, and idealistic. You value individuality and authenticity.",
@@ -591,12 +591,12 @@ function calculateMBTIPersonality() {
         "INFP": "INFP - The Idealist: Empathetic, idealistic, and introspective. You seek deep meaning and personal growth."
     };
 
-    
+    // Return the personality and its description
     return {
         personalityType: personality,
         description: personalityDescriptions[personality] || "Personality description not found."
     };
 }
 const result = calculateMBTIPersonality();
-console.log(result.personalityType); 
-console.log(result.description); 
+console.log(result.personalityType); // Output: ESTJ, ENFP, etc.
+console.log(result.description); // Output: The corresponding personality description
